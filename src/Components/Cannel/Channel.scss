@@ -1,0 +1,154 @@
+
+.channel__hero-img{
+    border-radius: 14px;
+    margin-bottom: 45px;
+}
+
+.channel__hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.channel__hero__user{
+    display: flex;
+    align-items: center;
+}
+
+.channel__hero-user{
+    margin-right: 14px;
+}
+
+.channel__hero__title{
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 33px;
+}
+
+.channel__hero__follow{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #C2C2C2;
+}
+
+.channel__link.active{
+    color: red;
+    border-bottom: 2px solid red;
+    padding-bottom: 5px;
+}
+
+.channel__big{
+    display: flex;
+    justify-content: space-between;
+}
+
+.channal__list{
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 54px;
+}
+
+.channel__center{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.channel__box{
+    display: flex;
+    max-width: 850px;
+}
+
+.channel__box-img{
+    margin-right: 32px;
+    border-radius: 14px;
+}
+
+.channel__box__title{
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #19202C;
+    margin-bottom: 10px;
+}
+
+.channel__text{
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.6;
+}
+
+.channel__box__views{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #C2C2C2;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.channel__right{
+    margin-right: 20px;
+}
+
+.channel__right__title{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C2C2C2;
+    margin-top: 0;
+}
+
+.channel__right__list{
+    max-width: 174px;
+    width: 100%;
+
+}
+
+.channel__right__item{
+    display: flex;
+    max-width: 174px;
+    width: 100%;
+    justify-content: space-between;
+    &+&{
+        margin-top: 30px;
+    }
+}
+
+.channel__bottom{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    margin-bottom: 30px;
+}
+
+.channel__bottom__title{
+    margin: 0;
+}
+
+
+.channel__list{
+    display: flex;
+    overflow-x: auto;
+}
+
+.channel__item{
+    &+&{
+        margin-left: 40px;
+    }
+}
+
+.channel__img{
+    border-radius: 14px;
+}

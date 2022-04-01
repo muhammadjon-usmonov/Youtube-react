@@ -1,0 +1,55 @@
+.box{
+    max-width: 1110px;
+    width: 100%;
+
+}
+.home__item-img{
+    border-radius: 14px;
+}
+
+.home__list-top{
+    display: flex;
+    overflow-x: auto;
+    max-width: 1110px;
+    width: 100%;
+}
+
+.home__item-top{
+    &+&{
+        margin-left: 40px;
+
+    }
+}
+
+.home__list-middle{
+    display: flex;
+    overflow-x: auto;
+    max-width: 1110px;
+    width: 100%;
+}
+
+.home__item-middle{
+    &+&{
+        margin-left: 40px;
+    }
+}
+
+.box__dollie{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.home__list-bottom{
+    max-width: 1110px;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+
+.home__item-bottom{
+    &+&{
+        margin-left: 40px;
+    }
+}
