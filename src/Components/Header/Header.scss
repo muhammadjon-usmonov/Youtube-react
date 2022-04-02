@@ -17,12 +17,21 @@
     margin-bottom: 59px;
 }
 
+.header__center{
+    transition: 1s;
+    // margin-left: -200px;
+}
+.onBurger{
+    display: none;
+}
 .header__list{
     margin-bottom: 58px;
     width: 154px;
 }
 
 .header__item{
+    display: flex;
+    align-items: center;
     &+&{
         vertical-align: middle;
         margin-top: 28px;

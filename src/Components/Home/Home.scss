@@ -1,18 +1,46 @@
 .box{
     max-width: 1110px;
     width: 100%;
-
+    // margin-left: -200px;
 }
+
+.box__hero__top{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+    transition: 1s;
+    margin-bottom: 28px;
+    padding-right: 40px;
+}
+
+.box__hero__img{
+    display: flex;
+    align-items: center;
+}
+
+.box__hero-img{
+    margin-right: 20px;
+}
+
+.box__hero__title{
+    margin: 0;
+    margin-right: 19px;
+}
+
+.box__left-img{
+    margin-right: 10px;
+}
+
 .home__item-img{
     border-radius: 14px;
 }
 
-.home__list-top{
+.home__list{
     display: flex;
-    overflow-x: auto;
-    max-width: 1110px;
-    width: 100%;
+    overflow-x: auto;   
 }
+
 
 .home__item-top{
     &+&{
@@ -21,35 +49,27 @@
     }
 }
 
-.home__list-middle{
-    display: flex;
-    overflow-x: auto;
-    max-width: 1110px;
-    width: 100%;
-}
-
 .home__item-middle{
     &+&{
         margin-left: 40px;
     }
 }
 
-.box__dollie{
-    display: flex;  
-    align-items: center;
-    justify-content: space-between;
-    overflow-x: auto;
-}
-
-.home__list-bottom{
-    max-width: 1110px;
-    width: 100%;
-    display: flex;
-    overflow-x: auto;
-}
-
 .home__item-bottom{
     &+&{
         margin-left: 40px;
     }
+}
+
+.box__hero__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box__hero__span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C2C2C2;
 }

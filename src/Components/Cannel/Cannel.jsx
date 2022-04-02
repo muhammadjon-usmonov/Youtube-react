@@ -61,7 +61,7 @@ function Cannel (){
            <div className="channel__left">
                <ul className="channal__list">
                     <li className="channel__item">
-                        <NavLink className="channel__link" to={"/cannel"} >
+                        <NavLink className="channel__link" to={"/channel"} >
                             Home
                         </NavLink>  
                     </li>
@@ -149,8 +149,9 @@ function Cannel (){
                     {
                         channelImg && channelImg.map((channelImg)=>(
                         <li className="channel__item" key={channelImg.id} >
-                            <img className="channel__img" src={channelImg.url} alt="Photos" width={200} height={150} />
-                            
+                            <NavLink to={"/video"}>
+                                <img className="channel__img" src={channelImg.url} alt="Photos" width={200} height={150} />
+                            </NavLink>                            
                         </li>
                         ))
                     }
