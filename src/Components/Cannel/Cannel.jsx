@@ -15,7 +15,7 @@ import floraImg from "..//..//Assets/Images/png/flora.png";
 import violetImg from "..//..//Assets/Images/png/violet.png";
 import phillipImg from "..//..//Assets/Images/png/phillip.png";
 
-function Cannel (){
+function Cannel ({videoFunc}){
     const [channelImg, setChannelImg] = React.useState([]);
 
     React.useEffect(()=>{
@@ -25,7 +25,7 @@ function Cannel (){
             const data = await res.json();
 
             if(data){
-                setChannelImg(data.slice(200,250));
+                setChannelImg(data.slice(200,300));
             }
         })();
     }, []);
@@ -141,7 +141,7 @@ function Cannel (){
                             Margaret Phelps videos
                         </h3>
                         <div>
-                            <img src={leftImg} alt="" />
+                            <img className="channel__bottom__icon" src={leftImg} alt="" />
                             <img src={rightImg} alt="" />
                         </div>
                     </div>
@@ -150,8 +150,15 @@ function Cannel (){
                         channelImg && channelImg.map((channelImg)=>(
                         <li className="channel__item" key={channelImg.id} >
                             <NavLink to={"/video"}>
-                                <img className="channel__img" src={channelImg.url} alt="Photos" width={200} height={150} />
-                            </NavLink>                            
+                                <img className="channel__img" src={channelImg.url} alt="Photos" width={200} height={150} 
+                                onClick={() => { videoFunc(channelImg.url, channelImg.title)}}
+                                />
+                            </NavLink>  
+                            <h3 className="channel__item__text">{channelImg.title}</h3>
+                                <p className="channel__item__follow">
+                                        <span>80k views  ·  3 days ago</span>
+                                         <span>Dollie Blair</span>
+                                </p>                          
                         </li>
                         ))
                     }

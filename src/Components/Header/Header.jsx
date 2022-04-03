@@ -9,22 +9,25 @@ import headerLogo from '..//../Assets/Images/svg/Logo.svg';
 import { Link } from "react-router-dom";
 
 
-function Header (){
+function Header ({isClicked}){
     const [click, setClick] = useState(false);
     const HamburgerClick = useRef()
     const BurgerOn = useRef()
     const BurgerStop = useRef()
+
 
     return(
         <>
             <header className="header">
                <div className="header__top">
                 <img src={burger} ref={BurgerStop}  onClick={()=>{
+                        isClicked(false)
                         HamburgerClick.current.style.marginLeft = "-200px"
                         BurgerOn.current.style.display = "block"
                         BurgerStop.current.style.display = "none"
                     }} alt="" />
                        <img src={burger} ref={BurgerOn} className="onBurger" onClick={()=>{
+                        isClicked(true)
                         HamburgerClick.current.style.marginLeft = "0px"
                         BurgerOn.current.style.display = "none"
                         BurgerStop.current.style.display = "block"

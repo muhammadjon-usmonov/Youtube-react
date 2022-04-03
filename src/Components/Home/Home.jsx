@@ -5,8 +5,9 @@ import homeDollieImg from "..//..//Assets/Images/svg/Gussie.svg";
 import leftImg from "..//..//Assets/Images/svg/Left.svg";
 import rightImg from "..//..//Assets/Images/svg/Right.svg";
 import homeFoodImg from "..//..//Assets/Images/svg/Food.svg";
+import { NavLink } from "react-router-dom";
 
-function Home (){
+function Home ({videoFunc}){
     const [users, setUsers] = React.useState([]);
     const [recom, setRecom] = React.useState([]);
     const [mean, setMean] = React.useState([]);
@@ -28,17 +29,17 @@ function Home (){
 
     return (
         <>
-           <div className="box" ref={homeRender}>
-                <div className="box__hero">
-                    <div className="box__hero__top">
-                        <div className="box__hero__img">
-                            <img className="box__hero-img" src={homeDollieImg} alt="" width={50} height={50} />
-                            <h3 className="box__hero__title">
+           <div className="home" ref={homeRender}>
+                <div className="home__hero">
+                    <div className="home__hero__top">
+                        <div className="home__hero__img">
+                            <img className="home__hero-img" src={homeDollieImg} alt="" width={50} height={50} />
+                            <h3 className="home__hero__title">
                                 Dollie Blair
                             </h3>
                         </div>
                         <div>
-                            <img className="box__left-img" src={leftImg} alt="" />
+                            <img className="home__left-img" src={leftImg} alt="" />
                             <img src={rightImg} alt="" />
                         </div>
                     </div>
@@ -47,21 +48,33 @@ function Home (){
                        {   
                             users && users.map((user)=>(
                                 <li className="home__item-top" key={user.id}>
-                                    <img className="home__item-img" src={user.url} alt="Photos" width={250} height={150}/>
-                                    <p>{user.title}</p>
+                                   <NavLink to={"/video"}>
+                                    <img className="home__item-img" 
+                                        src={user.url} 
+                                        alt="Photos" 
+                                        width={250} 
+                                        height={150}
+                                        onClick={() => { videoFunc(user.url, user.title)}}
+                                        />
+                                   </NavLink>
+                                    <h3 className="home__item__text" >{user.title}</h3>
+                                    <p className="home__item__follow">
+                                            <span>80k views  ·  3 days ago</span>
+                                            <span>Dollie Blair</span>
+                                    </p>
                                 </li>
                             ))
                           }
                     </ul>
                 </div>
 
-                <div className="box__middle">
-                    <div className="box__hero__top">
-                            <h3 className="box__hero__title">
+                <div className="home__middle">
+                    <div className="home__hero__top">
+                            <h3 className="home__hero__title">
                                 Recommended
                             </h3>
                         <div>
-                            <img className="box__left-img" src={leftImg} alt="" />
+                            <img className="home__left-img" src={leftImg} alt="" />
                             <img src={rightImg} alt="" />
                         </div>
                     </div>
@@ -70,28 +83,39 @@ function Home (){
                        {   
                             recom && recom.map((recom)=>(
                                 <li className="home__item-middle" key={recom.id}>
-                                    <img className="home__item-img" src={recom.url} alt="Photos" width={340} height={200} />
-                                    <p>{recom.title}</p>
+                                   <NavLink to={"/video"}>
+                                    <img className="home__item-img" src={recom.url} alt="Photos" width={340} height={200}
+                                        onClick={() => { videoFunc(recom.url)}}
+                                        />
+                                   </NavLink>
+                                    <h3 className="home__item__text">{recom.title}</h3>
+                                    <p className="home__item__follow">
+                                            <span>80k views  ·  3 days ago</span>
+                                            <span>Dollie Blair</span>
+                                    </p>
                                 </li>
                             ))
                           }
                     </ul>
                 </div>
 
-                <div className="box__bottom">
-                    <div className="box__hero__top">
-                        <div className="box__hero__inner">
-                            <img className="box__hero-img"src={homeFoodImg} alt="" width={50} height={50} />
-                            <h3 className="box__hero__title">
+                <div className="home__bottom">
+                    <div className="home__hero__top">
+                        <div className="home__hero__inner">
+                            <img className="home__hero-img"src={homeFoodImg} alt="" width={50} height={50} />
+                            <h3 className="home__hero__title">
                             Food & Drink
                             </h3>
-                            <span className="box__hero__span">
+                            <span className="home__hero__span">
                                 Recommended channel for you
                             </span>
                         </div>
-                        <div>
-                            <img className="box__left-img" src={leftImg} alt="" />
+                        <div className="home__hero__link">
+                           <button className="video__bottom__subs-link"> Subscribe 2.3m </button>
+                           <div>
+                             <img className="home__left-img" src={leftImg} alt="" />
                             <img src={rightImg} alt="" />
+                           </div>
                         </div>
                     </div>
 
@@ -99,8 +123,16 @@ function Home (){
                        {   
                             mean && mean.map((mean)=>(
                                 <li className="home__item-bottom" key={mean.id}>
-                                    <img className="home__item-img" src={mean.url} alt="Photos" width={250} height={150} />
-                                    <p>{mean.title}</p>
+                                   <NavLink to={"/video"}>
+                                    <img className="home__item-img" src={mean.url} alt="Photos" width={250} height={150}
+                                        onClick={() => { videoFunc(mean.url)}}
+                                        />
+                                   </NavLink>
+                                    <h3 className="home__item__text">{mean.title}</h3>
+                                    <p className="home__item__follow">
+                                            <span>80k views  ·  3 days ago</span>
+                                            <span>Dollie Blair</span>
+                                    </p>
                                 </li>
                             ))
                         }

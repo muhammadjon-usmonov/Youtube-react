@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import './Video.scss'
 import videoHeroImg from '..//..//Assets/Images/png/videoImg.png';
 import videoFood from '..//..//Assets/Images/svg/Food.svg';
 
-function Video (){
+function Video ({myVideo, myTitle, click}){
 
-    const [video, setVideo] = React.useState([])
+    const [video, setVideo] = React.useState([]);
+
+    const videoRef = useRef();
+    const videoTitleRef = useRef();
 
     React.useEffect(()=>{
         ( async () => {
@@ -14,7 +17,7 @@ function Video (){
 
             const data = await res.json();
             if(data){
-                setVideo(data.slice(1,30))
+                setVideo(data.slice(300,400))
             }
 
         })();
@@ -23,13 +26,19 @@ function Video (){
 
     return(
         <>
-            <div className="video">
+            <div className="video" style={{
+                "marginLeft" : (click ? "0" : "-200px")
+                
+
+            }}>
                 <div className="video__left">
-                    <img src={videoHeroImg} alt="" width={820} height={400} />
+                    <img className="video__left__img" ref={videoRef} src={!myVideo ? videoHeroImg : myVideo} alt="" 
+                    width={800} height={400} />
                     <div className="video__hero">
                         <div className="video__hero__left">
-                            <h3 className="video__hero__title">
-                                Dude You Re Getting A Telescope
+                            <h3 className="video__hero__title" ref={videoTitleRef}>
+                                {
+                                myTitle? myTitle: "Dude You Re Getting A Telescope"}
                             </h3>
                             <span className="video__hero__views">
                                 123k views
@@ -75,7 +84,6 @@ function Video (){
                             Subscribe 2.3m
                         </a>
                     </div>
-
                 </div>
 
                 <div className="video__right">
@@ -83,15 +91,32 @@ function Video (){
                             <h3 className="video__right__title">
                                 Next
                             </h3>
-                            <p className="video__right__span">
+                            <span className="video__right__span">
                                 AUTOPLAY
-                            </p>
+                            </span>
                        </div>
-                    <ul className="video__list">
+                    <ul className="video__list" >
                          {
                             video && video.map((videos) => (
                                 <li className="video__item" key={videos.id}>
-                                    <img src={videos.url} alt="" width={250} height={200} />
+                                    <img className="video__item__img" src={videos.url} alt="" width={click? 290 : 450  } height={200} 
+                                         
+                                        onClick={()=>{
+                                            videoTitleRef.current.textContent = videos.title;
+                                            videoRef.current.src = videos.url;
+                                    }} />
+                                    <h3 className="video__item__title">
+                                        {videos.title}
+                                    </h3>
+                                    <p className="video__item__follow">
+                                            <span>
+                                                122k views
+                                            </span>
+                                            <span>
+                                            Dollie Blair
+                                            </span>
+
+                                    </p>
                                 </li>
                             ))
                         }

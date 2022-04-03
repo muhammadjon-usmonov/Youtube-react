@@ -36,6 +36,20 @@
     color: #C2C2C2;
 }
 
+.channel__hero-btn{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF; 
+    background: #FF0000;
+    border-radius: 20px; 
+    margin-bottom: auto; 
+    padding: 10px 20px;
+    border: none;
+    margin-left: 20px;
+}
+
 .channel__link.active{
     color: red;
     border-bottom: 2px solid red;
@@ -137,6 +151,9 @@
     margin: 0;
 }
 
+.channel__bottom__icon{
+    margin-right: 10px;
+}
 
 .channel__list{
     display: flex;
@@ -151,4 +168,26 @@
 
 .channel__img{
     border-radius: 14px;
+}
+
+
+.channel__item__text{
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #19202C;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.channel__item__follow{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    justify-content: space-between;
+    color: #C2C2C2;
 }
