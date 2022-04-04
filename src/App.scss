@@ -1,99 +1,143 @@
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./Assets/Fonts/mulish-v10-latin-regular.woff2") format("woff2"),
+    url("./Assets/Fonts/mulish-v10-latin-regular.woff") format("woff");
+}
 
 @font-face {
-	font-family: 'Mulish';
-	font-style: normal;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./Assets/Fonts/mulish-v10-latin-700.woff2") format("woff2"),
+    url("./Assets/Fonts/mulish-v10-latin-700.woff") format("woff");
+}
+
+.login{
+	margin-top: 0;
+	font-size: 22px;
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.form {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.form__inner{
+	margin-bottom: 10px;
+}
+
+.form__box{
+	margin-bottom: 10px;
+}
+
+.input{
+	max-width: 400px;
+	width: 100%;
+	padding: 10px 20px;
+	border: 1px solid rgb(214, 210, 210);
+	border-radius: 8px;
+	outline: none;
+	color: rgb(129, 125, 125);
+	font-size: 18px;
+}
+
+.button{
+	border: 0;
+	border-radius: 4px;
+	padding: 7px 10px;
+	max-width: 150px;
+	width: 100%;
 	font-weight: 400;
-	src: url('./Assets/Fonts/mulish-v10-latin-regular.woff2') format('woff2'), 
-		 url('./Assets/Fonts/mulish-v10-latin-regular.woff') format('woff'); 
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	color: #ffffff;
+	background: #ff0000;
+	border-radius: 20px;
+	margin-bottom: auto;
 }
-
-@font-face {
-	font-family: 'Mulish';
-	font-style: normal;
-	font-weight: 700;
-	src: url('./Assets/Fonts/mulish-v10-latin-700.woff2') format('woff2'), 
-		 url('./Assets/Fonts/mulish-v10-latin-700.woff') format('woff'); 
-}
-
-
-
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
-	scroll-behavior: smooth;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 body,
 ::after,
 ::before {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	font-family: 'Mulish', 'Arial', sans-serif;
-	height: 100%;
-	font-size: 16px;
-	line-height: 1.5;
-	margin: 0;
-	padding: 0;
+  font-family: "Mulish", "Arial", sans-serif;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 img {
-    object-fit: cover;
-    vertical-align: middle;
+  object-fit: cover;
+  vertical-align: middle;
 }
 
-.container{
-    display: flex;
-    align-items: flex-start;
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-	overflow-x: hidden;
+.container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: hidden;
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-ul{
-	margin: 0;
-	padding: 0;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-li{
-	list-style-type: none;
+li {
+  list-style-type: none;
 }
 
-a{
-	text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.center{
-	display: flex;
-	flex-direction: column;
-	max-width: 1110px;
-	width: 100%;
+.center {
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+  width: 100%;
 }
-

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Context } from '../Context/Authentication';
+import React from "react";
+import { Context } from "../Context/Authentication";
 
 const useToken = (setterOnly = false) => {
-	const ctx = React.useContext(Context);
+  const ctx = React.useContext(Context);
 
-	return setterOnly ? [ctx.setState] : [ctx.state, ctx.setState];
+  return setterOnly ? [ctx.setState] : [ctx.state, ctx.setState];
 };
 
 export default useToken;

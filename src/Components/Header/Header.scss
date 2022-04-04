@@ -1,206 +1,202 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-.header{
-    width: 164px;
-    margin-right: 40px;
-    padding-top: 30px;
+.header {
+  width: 164px;
+  margin-right: 40px;
+  padding-top: 30px;
 }
 
-.header__top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 175px;
-    width: 100%; 
-    margin-bottom: 59px;
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 175px;
+  width: 100%;
+  margin-bottom: 59px;
 }
 
-.header__center{
-    transition: 0.2s;
-    // margin-left: -200px;
-}
-.onBurger{
-    display: none;
-}
-.header__list{
-    margin-bottom: 58px;
-    width: 154px;
+.header__center {
+  transition: 0.2s;
+  // margin-left: -200px;
 }
 
-.header__item{
-    display: flex;
-    align-items: center;
-    &+&{
-        vertical-align: middle;
-        margin-top: 28px;
-        
-    }
-    &:nth-child(4){
-        margin-top: 60px;
-    }
-    &::before{
-        content: "";
-        background-repeat: no-repeat;
-        background-position: left 0 center;
-        display: inline-block;
-        margin: 0 auto;
-        vertical-align: middle;
-        margin: auto 0;
-        margin-right: 13px;
-    }
-
-    &:nth-child(1):before{
-        width: 20px;
-        height: 19px;
-        background-image: url('..//..//Assets/Images/svg/Home.svg');
-        background-size: 20px 19px;
-    }
-    
-    &:nth-child(2):before{
-        width: 20px;
-        height: 19px;
-        background-image: url('..//..//Assets/Images/svg/Trending.svg');
-        background-size: 16px 20px;
-    }
-    &:nth-child(3):before{
-        width: 18px;
-        height: 18px;
-        background-image: url('..//..//Assets/Images/svg/Subscriptions.svg');
-        background-size: 18px 18px;
-    }
-    &:nth-child(4):before{
-        width: 20px;
-        height: 19px;
-        background-image: url('..//..//Assets/Images/svg/Library.svg');
-        background-size: 20px 19px;
-    }
-    &:nth-child(5):before{
-        width: 20px;
-        height: 19px;
-        background-image: url('..//..//Assets/Images/svg/History.svg');
-        background-size: 20px 19px;
-    }
-    &:nth-child(6):before{
-        width: 20px;
-        height: 19px;
-        background-image: url('..//..//Assets/Images/svg/WatchLater.svg');
-        background-size: 20px 19px;
-    }
-
-    &:nth-child(7):before{
-        width: 20px;
-        height: 19px;
-        background-image: url('..//..//Assets/Images/svg/Favourites.svg');
-        background-size: 20px 19px;
-    }
-    &:nth-child(8):before{
-        width: 20px;
-        height: 19px;
-        background-image: url('..//..//Assets/Images/svg/Liked.svg');
-        background-size: 20px 19px;
-    }
-    &:nth-child(9):before{
-        width: 20px;
-        height: 19px;
-        background-image: url('..//..//Assets/Images/svg/Music.svg');
-        background-size: 20px 19px;
-    }
-    &:nth-child(10):before{
-        width: 20px;
-        height: 19px;
-        background-image: url('..//..//Assets/Images/svg/Games.svg');
-        background-size: 20px 19px;
-    }
-    &:nth-child(11):before{
-        width: 20px;
-        height: 19px;
-        background-image: url('..//..//Assets/Images/svg/ShowMore.svg');
-        background-size: 20px 19px;
-    }
+.onBurger {
+  display: none;
+}
+.header__list {
+  margin-bottom: 58px;
+  width: 154px;
 }
 
-.header__link{
-    color: #898989;
+.header__item {
+  display: flex;
+  align-items: center;
+  & + & {
+    vertical-align: middle;
+    margin-top: 28px;
+  }
+  &:nth-child(4) {
+    margin-top: 60px;
+  }
+  &::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: left 0 center;
+    display: inline-block;
+    margin: 0 auto;
+    vertical-align: middle;
+    margin: auto 0;
+    margin-right: 13px;
+  }
+
+  &:nth-child(1):before {
+    width: 20px;
+    height: 19px;
+    background-image: url("..//..//Assets/Images/svg/Home.svg");
+    background-size: 20px 19px;
+  }
+
+  &:nth-child(2):before {
+    width: 20px;
+    height: 19px;
+    background-image: url("..//..//Assets/Images/svg/Trending.svg");
+    background-size: 16px 20px;
+  }
+  &:nth-child(3):before {
+    width: 18px;
+    height: 18px;
+    background-image: url("..//..//Assets/Images/svg/Subscriptions.svg");
+    background-size: 18px 18px;
+  }
+  &:nth-child(4):before {
+    width: 20px;
+    height: 19px;
+    background-image: url("..//..//Assets/Images/svg/Library.svg");
+    background-size: 20px 19px;
+  }
+  &:nth-child(5):before {
+    width: 20px;
+    height: 19px;
+    background-image: url("..//..//Assets/Images/svg/History.svg");
+    background-size: 20px 19px;
+  }
+  &:nth-child(6):before {
+    width: 20px;
+    height: 19px;
+    background-image: url("..//..//Assets/Images/svg/WatchLater.svg");
+    background-size: 20px 19px;
+  }
+
+  &:nth-child(7):before {
+    width: 20px;
+    height: 19px;
+    background-image: url("..//..//Assets/Images/svg/Favourites.svg");
+    background-size: 20px 19px;
+  }
+  &:nth-child(8):before {
+    width: 20px;
+    height: 19px;
+    background-image: url("..//..//Assets/Images/svg/Liked.svg");
+    background-size: 20px 19px;
+  }
+  &:nth-child(9):before {
+    width: 20px;
+    height: 19px;
+    background-image: url("..//..//Assets/Images/svg/Music.svg");
+    background-size: 20px 19px;
+  }
+  &:nth-child(10):before {
+    width: 20px;
+    height: 19px;
+    background-image: url("..//..//Assets/Images/svg/Games.svg");
+    background-size: 20px 19px;
+  }
+  &:nth-child(11):before {
+    width: 20px;
+    height: 19px;
+    background-image: url("..//..//Assets/Images/svg/ShowMore.svg");
+    background-size: 20px 19px;
+  }
 }
 
-.header__link.active{
-    color: red;
+.header__link.active {
+  color: red;
 }
 
-.header__title{
-    margin: 0;
-    margin-bottom: 33px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 23px;
+.header__title {
+  margin: 0;
+  margin-bottom: 33px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
 }
 
-.header__bottom__show{
-    display: none;  
+.header__bottom__show {
+  display: none;
 }
 
-.header__bottom__list{
-    margin-bottom: 107px;  
+.header__bottom__list {
+  margin-bottom: 107px;
 }
 
-.header__bottom__item{
-    &+&{
-        margin-top: 29px;
-    }
+.header__bottom__item {
+  & + & {
+    margin-top: 29px;
+  }
 
-    &::before{
-        content: "";
-        display: inline-block;
-        width: 26px;
-        height: 26px;
-        background-position: left 0 center;
-        background-repeat: no-repeat;
-        background-size: 26px 26px;
-        vertical-align: middle;
-        margin: 0 auto;
-        margin-right: 10px;
-    }
-    &:nth-child(1)::before{
-        background-image: url('../..//Assets//Images//svg/Gussie.svg');
-    }
-    &:nth-child(2)::before{
-        background-image: url('../..//Assets//Images//svg/Nora.svg');
-    }
-    &:nth-child(3)::before{
-        background-image: url('../..//Assets//Images//svg/Belle.svg');
-    }
-    &:nth-child(4)::before{
-        background-image: url('../..//Assets//Images//svg/Eunice.svg');
-    }
-    &:nth-child(5)::before{
-        background-image: url('../..//Assets//Images//svg/Emma.svg');
-    }
-    &:nth-child(6)::before{
-        background-image: url('../..//Assets//Images//svg/Leah.svg');
-    }
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-position: left 0 center;
+    background-repeat: no-repeat;
+    background-size: 26px 26px;
+    vertical-align: middle;
+    margin: 0 auto;
+    margin-right: 10px;
+  }
+  &:nth-child(1)::before {
+    background-image: url("../..//Assets//Images//svg/Gussie.svg");
+  }
+  &:nth-child(2)::before {
+    background-image: url("../..//Assets//Images//svg/Nora.svg");
+  }
+  &:nth-child(3)::before {
+    background-image: url("../..//Assets//Images//svg/Belle.svg");
+  }
+  &:nth-child(4)::before {
+    background-image: url("../..//Assets//Images//svg/Eunice.svg");
+  }
+  &:nth-child(5)::before {
+    background-image: url("../..//Assets//Images//svg/Emma.svg");
+  }
+  &:nth-child(6)::before {
+    background-image: url("../..//Assets//Images//svg/Leah.svg");
+  }
 }
 
-.header__bottom__link{
-    color: #898989;
+.header__bottom__link {
+  color: #898989;
 }
 
-.header__setting{
-    &::before{
-        content: "";
-        display: inline-block;
-        width: 18px ;
-        height: 20px;
-        background-image: url("..//..//Assets/Images/svg/Setting.svg");
-        background-position: left 0 center;
-        background-size: 18px 20px;
-        margin-right: 12px;
-        vertical-align: middle;
-    }
-    color: #898989;
+.header__setting {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+    background-image: url("..//..//Assets/Images/svg/Setting.svg");
+    background-position: left 0 center;
+    background-size: 18px 20px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  color: #898989;
 }
 
-.show-transition{
-    display: block;
+.show-transition {
+  display: block;
 }
